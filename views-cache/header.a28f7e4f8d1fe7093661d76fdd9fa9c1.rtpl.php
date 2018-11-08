@@ -1,0 +1,264 @@
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#333">
+  <title>Geová</title>
+  <meta name="description" content="Geová - Página Inicial">
+  <link rel="shortcut icon" href="assets/site/img/favicon.png?v=3">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="assets/site/plugins/revolution/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+  <!-- REVOLUTION STYLE SHEETS -->
+  <link rel="stylesheet" type="text/css" href="assets/site/plugins/revolution/revolution/css/settings.css">
+  <!-- REVOLUTION LAYERS STYLES -->
+  <link rel="stylesheet" type="text/css" href="assets/site/plugins/revolution/revolution/css/layers.css">
+  <!-- REVOLUTION NAVIGATION STYLES -->
+  <link rel="stylesheet" type="text/css" href="assets/site/plugins/revolution/revolution/css/navigation.css">
+  <link rel="stylesheet" href="assets/site/css/preload.min.css">
+  <link rel="stylesheet" href="assets/site/css/plugins.min.css">
+  <!-- TYPEWRITER ADDON -->
+  <script type="text/javascript" src="assets/site/plugins/revolution/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/site/plugins/revolution/revolution-addons/typewriter/css/typewriter.css">
+  <link rel="stylesheet" href="assets/site/css/style.light-blue-500.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--[if lt IE 9]>
+        <script src="assets/site/js/html5shiv.min.js"></script>
+        <script src="assets/site/js/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <style type="text/css">
+    body{
+      overflow: hidden!important;
+    }
+  </style>
+  <body onload="<?php if( GET==1 ){ ?>
+  showmodal(1);
+  <?php } ?>">
+
+  <div id="ms-preload" class="ms-preload">
+    <div id="status">
+      <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="ms-site-container">
+    <!-- Modal -->
+    <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog animated zoomIn animated-3x" role="document">
+        <div class="modal-content">
+          <div class="modal-header d-block shadow-2dp no-pb">
+            <button type="button" class="close d-inline pull-right mt-2" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">
+                <i class="zmdi zmdi-close"></i>
+              </span>
+            </button>
+            <div class="modal-title text-center">
+              <h3 class="no-m ms-site-title">Geo
+                <span>vá</span>
+              </h3>
+            </div>
+            <div class="modal-header-tabs">
+              <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="nav-link active withoutripple">
+                    <i class="zmdi zmdi-account"></i> Entrar</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="nav-link withoutripple">
+                      <i class="zmdi zmdi-account-add"></i> Registrar</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="nav-link withoutripple">
+                        <i class="zmdi zmdi-key"></i> Recuperar</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="modal-body">
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active show  fade" id="ms-login-tab">
+                      <form autocomplete="off" action="/login" method="POST">
+                        <fieldset>
+                          <div id="rsuccess">
+
+                          </div>
+                          <div class="form-group label-floating">
+                            <div class="input-group">
+                              <span class="input-group-addon">
+                                <i class="zmdi zmdi-account"></i>
+                              </span>
+                              <label class="control-label" for="ms-form-email">Email</label>
+                              <input type="text" name="email" id="ms-form-email" class="form-control"> </div>
+                            </div>
+                            <div class="form-group label-floating">
+                              <div class="input-group">
+                                <span class="input-group-addon">
+                                  <i class="zmdi zmdi-lock"></i>
+                                </span>
+                                <label class="control-label" for="ms-form-pass">Senha</label>
+                                <input type="password" name="password" id="ms-form-pass" class="form-control"> </div>
+                              </div>
+                              <div class="row mt-2">
+                                <div class="col-md-6">
+                                  <div class="form-group no-mt">
+                                    <div class="checkbox">
+                                      <label>
+                                        <input type="checkbox"> Lembre-me </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <button class="btn btn-raised btn-primary pull-right" type="submit">Entrar</button>
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </form>
+                            <div class="text-center">
+                              <h3>Logar com</h3>
+                              <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-facebook">
+                                <i class="zmdi zmdi-facebook"></i> Facebook</a>
+                              </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
+                              <form  id="formRegister" method="POST">
+                                <fieldset>
+                                  <div id="tabRegister">
+                                  </div>
+                                  <div class="form-group label-floating">
+                                    <div class="input-group">
+                                      <span class="input-group-addon">
+                                        <i class="zmdi zmdi-account"></i>
+                                      </span>
+                                      <label class="control-label" for="ms-form-user-r">Nome Completo</label>
+                                      <input type="text" id="ms-form-user-r" name="name" class="form-control" required> </div>
+                                    </div>
+                                    <div class="form-group label-floating">
+                                      <div class="input-group">
+                                        <span class="input-group-addon">
+                                          <i class="zmdi zmdi-email"></i>
+                                        </span>
+                                        <label class="control-label" for="ms-form-email-r">Email</label>
+                                        <input type="email" id="ms-form-email-r" name="email" class="form-control" required> </div>
+                                      </div>
+                                      <div class="form-group label-floating">
+                                      <div class="input-group">
+                                        <span class="input-group-addon">
+                                          <i class="zmdi zmdi-email"></i>
+                                        </span>
+                                        <label class="control-label" for="ms-form-email-r">Usuário</label>
+                                        <input type="text" id="ms-form-username-r" name="username" class="form-control" required> </div>
+                                      </div>
+                                      <div class="form-group label-floating">
+                                        <div class="input-group">
+                                          <span class="input-group-addon">
+                                            <i class="zmdi zmdi-lock"></i>
+                                          </span>
+                                          <label class="control-label" for="ms-form-pass-r">Senha</label>
+                                          <input type="password" id="ms-form-pass-r" name="password" class="form-control" required> </div>
+                                        </div>
+                                        <div class="form-group label-floating">
+                                          <div class="input-group">
+                                            <span class="input-group-addon">
+                                              <i class="zmdi zmdi-lock"></i>
+                                            </span>
+                                            <label class="control-label" for="ms-form-pass-rn">Repita a senha</label>
+                                            <input type="password" id="ms-form-pass-rn" class="form-control" required> </div>
+                                          </div>
+                                          <button class="btn btn-raised btn-block btn-primary">Registrar Agora</button>
+                                        </fieldset>
+                                      </form>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+                                      <fieldset>
+                                        <div class="form-group label-floating">
+                                          <div class="input-group">
+                                            <span class="input-group-addon">
+                                              <i class="zmdi zmdi-account"></i>
+                                            </span>
+                                            <label class="control-label" for="ms-form-user-re">Usuário</label>
+                                            <input type="text" id="ms-form-user-re" class="form-control"> </div>
+                                          </div>
+                                          <div class="form-group label-floating">
+                                            <div class="input-group">
+                                              <span class="input-group-addon">
+                                                <i class="zmdi zmdi-email"></i>
+                                              </span>
+                                              <label class="control-label" for="ms-form-email-re">Email</label>
+                                              <input type="email" id="ms-form-email-re" class="form-control"> </div>
+                                            </div>
+                                            <button class="btn btn-raised btn-block btn-primary">Enviar Senha</button>
+                                          </fieldset>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <header style="background-image: url(assets/site/plugins/revolution/assets/images/menubg.jpg);" class="ms-header ms-header-white">
+                              <!--ms-header-white-->
+                              <div class="container container-full">
+                                <div class="ms-title">
+                                  <a href="/">
+                                    <img src="assets/site/img/geova.png" width="50%" alt="Logo Geová">
+
+                                  </a>
+                                </div>
+                                <div class="header-right">
+                                  <div class="share-menu">
+                                    <ul class="share-menu-list">
+                                      <li class="animated fadeInRight animation-delay-3">
+                                        <a href="javascript:void(0)" class="btn-circle btn-google">
+                                          <i class="zmdi zmdi-google"></i>
+                                        </a>
+                                      </li>
+                                      <li class="animated fadeInRight animation-delay-2">
+                                        <a href="javascript:void(0)" class="btn-circle btn-facebook">
+                                          <i class="zmdi zmdi-facebook"></i>
+                                        </a>
+                                      </li>
+                                      <li class="animated fadeInRight animation-delay-1">
+                                        <a href="javascript:void(0)" class="btn-circle btn-twitter">
+                                          <i class="zmdi zmdi-twitter"></i>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                    <a href="javascript:void(0)" class="btn-circle btn-circle-primary animated zoomInDown animation-delay-7">
+                                      <i class="zmdi zmdi-share"></i>
+                                    </a>
+                                  </div>
+                                  <a href="javascript:void(0)" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8" data-toggle="modal" data-target="#ms-account-modal">
+                                    <i class="zmdi zmdi-account"></i>
+                                  </a>
+                                  <form class="search-form animated zoomInDown animation-delay-9">
+                                    <input id="search-box" type="text" class="search-input" placeholder="Search..." name="q" />
+                                    <label for="search-box">
+                                      <i class="zmdi zmdi-search"></i>
+                                    </label>
+                                  </form>
+                                  <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary ms-toggle-left animated zoomInDown animation-delay-10">
+                                    <i class="zmdi zmdi-menu"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </header>
+                            <nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary">
+                              <div class="container container-full">
+                                <div class="navbar-header">
+                                  
+                                </div>
+                                <div class="collapse navbar-collapse" id="ms-navbar">
+                                    
+                                  
+                                </div>
+                                <a href="javascript:void(0)" class="ms-toggle-left btn-navbar-menu">
+                                  <i class="zmdi zmdi-menu"></i>
+                                </a>
+                              </div>
+                              <!-- container -->
+                            </nav>
